@@ -1,23 +1,340 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Canox — nền tảng thương mại điện tử của Cano. Kết nối Shop (người bán) và Buyer (người mua) trên một hệ sinh thái."
+      content="Canox — nền tảng thương mại điện tử của Cano. Kết nối Shop (người bán) và Buyer (người mua)."
     />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Canox — Thương mại điện tử bởi Cano</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <span class="logo__icon">C</span>
+          <span>
+            <span class="logo__name">Canox</span>
+            <span class="logo__by">by Cano</span>
+          </span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Chính">
+          <a href="#tinh-nang">Tính năng</a>
+          <a href="#doi-tuong">Shop &amp; Buyer</a>
+          <a href="#cach-hoat-dong">Cách hoạt động</a>
+          <a href="#lien-he">Liên hệ</a>
+        </nav>
+
+        <div class="header__actions">
+          <a href="#lien-he" class="btn-ghost">Đăng nhập</a>
+          <a href="#lien-he" class="btn-primary">Bắt đầu miễn phí</a>
+        </div>
+
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Mở menu">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="nav-mobile container" aria-label="Menu di động">
+        <a href="#tinh-nang">Tính năng</a>
+        <a href="#doi-tuong">Shop &amp; Buyer</a>
+        <a href="#cach-hoat-dong">Cách hoạt động</a>
+        <a href="#lien-he">Liên hệ</a>
+        <a href="#lien-he" class="btn-primary">Bắt đầu miễn phí</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="container">
+          <div class="hero__content">
+            <p class="badge">
+              <span class="badge__dot"></span>
+              Sản phẩm thương mại điện tử của <strong>Cano</strong>
+            </p>
+            <h1>
+              Mua bán trực tuyến
+              <span>đơn giản hơn với Canox</span>
+            </h1>
+            <p class="hero__lead">
+              Nền tảng thương mại điện tử kết nối <strong>Shop</strong> (người bán) và
+              <strong>Buyer</strong> (người mua) — quản lý cửa hàng, đơn hàng và thanh toán trên một
+              hệ sinh thái thống nhất.
+            </p>
+            <div class="hero__cta">
+              <a href="#lien-he" class="btn-lg btn-lg--solid">Mở cửa hàng — Shop</a>
+              <a href="#lien-he" class="btn-lg btn-lg--outline">Mua sắm ngay — Buyer</a>
+            </div>
+          </div>
+
+          <div class="dashboard" aria-hidden="true">
+            <div class="dashboard__bar">
+              <span class="dot-red"></span>
+              <span class="dot-amber"></span>
+              <span class="dot-green"></span>
+              <span class="dashboard__title">canox.app — dashboard</span>
+            </div>
+            <div class="dashboard__grid">
+              <div class="stat-card">
+                <p class="stat-card__label">Doanh thu hôm nay</p>
+                <p class="stat-card__value">12.4M <small>₫</small></p>
+                <p class="stat-card__trend">+18%</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-card__label">Đơn hàng mới</p>
+                <p class="stat-card__value">47</p>
+                <p class="stat-card__trend">+12</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-card__label">Shop đang hoạt động</p>
+                <p class="stat-card__value">1.2K</p>
+                <p class="stat-card__trend">live</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="doi-tuong" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Hai vai trò, một nền tảng</h2>
+            <p>
+              Canox được thiết kế cho cả hai phía thị trường — người bán xây dựng doanh nghiệp,
+              người mua tìm kiếm sản phẩm chất lượng.
+            </p>
+          </div>
+
+          <div class="personas">
+            <article class="card">
+              <div class="card__head">
+                <span class="card__icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  </svg>
+                </span>
+                <span class="card__badge">Shop</span>
+              </div>
+              <h3>Dành cho người bán</h3>
+              <p>
+                Mở cửa hàng trực tuyến trong vài phút. Quản lý sản phẩm, tồn kho, đơn hàng và doanh
+                thu từ một bảng điều khiển duy nhất.
+              </p>
+              <ul class="feature-list">
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Tạo shop &amp; catalog sản phẩm
+                </li>
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Quản lý đơn hàng &amp; vận chuyển
+                </li>
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Báo cáo doanh thu theo thời gian thực
+                </li>
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Khuyến mãi &amp; mã giảm giá
+                </li>
+              </ul>
+              <a href="#lien-he" class="card__link">
+                Đăng ký Shop
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </article>
+
+            <article class="card">
+              <div class="card__head">
+                <span class="card__icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </span>
+                <span class="card__badge">Buyer</span>
+              </div>
+              <h3>Dành cho người mua</h3>
+              <p>
+                Khám phá hàng ngàn shop, so sánh giá, đặt hàng an toàn và theo dõi giao hàng — trải
+                nghiệm mua sắm mượt mà trên mọi thiết bị.
+              </p>
+              <ul class="feature-list">
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Tìm kiếm &amp; lọc sản phẩm thông minh
+                </li>
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Giỏ hàng &amp; thanh toán đa phương thức
+                </li>
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Theo dõi đơn hàng realtime
+                </li>
+                <li>
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Đánh giá &amp; phản hồi shop
+                </li>
+              </ul>
+              <a href="#lien-he" class="card__link">
+                Khám phá Buyer
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tinh-nang" class="section section--alt">
+        <div class="container">
+          <div class="section__header">
+            <h2>Mọi thứ bạn cần để bán &amp; mua online</h2>
+            <p>
+              Canox gom toàn bộ công cụ thương mại điện tử — từ catalog đến giao hàng — trong một
+              nền tảng do Cano phát triển.
+            </p>
+          </div>
+
+          <div class="features">
+            <div class="feature-card">
+              <span class="feature-card__icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" /></svg></span>
+              <h3>Quản lý đa shop</h3>
+              <p>Một tài khoản Canox, nhiều cửa hàng — phù hợp thương hiệu và nhà bán lẻ.</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-card__icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" /></svg></span>
+              <h3>Thanh toán tích hợp</h3>
+              <p>Hỗ trợ ví điện tử, chuyển khoản và COD — minh bạch, đối soát nhanh.</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-card__icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" /></svg></span>
+              <h3>Vận chuyển thông minh</h3>
+              <p>Kết nối đơn vị giao hàng, in vận đơn và cập nhật trạng thái tự động.</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-card__icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" /></svg></span>
+              <h3>Bảo mật &amp; tin cậy</h3>
+              <p>Mã hóa giao dịch, xác thực hai lớp và chính sách bảo vệ người mua.</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-card__icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" /></svg></span>
+              <h3>Phân tích doanh thu</h3>
+              <p>Biểu đồ, báo cáo xuất nhập tồn và insight hành vi khách hàng.</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-card__icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" /></svg></span>
+              <h3>Ứng dụng di động</h3>
+              <p>Shop và Buyer đều có trải nghiệm tối ưu trên iOS &amp; Android.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cach-hoat-dong" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Bắt đầu trong 4 bước</h2>
+            <p>Quy trình đơn giản cho cả người bán lẫn người mua — không cần kỹ thuật phức tạp.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step__num">01</span>
+              <h3>Đăng ký tài khoản</h3>
+              <p>Chọn vai trò Shop hoặc Buyer, xác minh email và hoàn tất hồ sơ trong vài phút.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">02</span>
+              <h3>Thiết lập hoặc khám phá</h3>
+              <p>Shop: thêm sản phẩm, cấu hình thanh toán. Buyer: duyệt danh mục và thêm vào giỏ.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">03</span>
+              <h3>Giao dịch an toàn</h3>
+              <p>Đặt hàng, thanh toán qua Canox và theo dõi trạng thái đến khi nhận hàng.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">04</span>
+              <h3>Phát triển bền vững</h3>
+              <p>Shop mở rộng quy mô với báo cáo &amp; marketing. Buyer tích điểm và đánh giá shop.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="lien-he" class="section">
+        <div class="container">
+          <div class="cta-box">
+            <p class="cta-box__label">Công ty Cano</p>
+            <h2>Sẵn sàng trải nghiệm Canox?</h2>
+            <p>
+              Nền tảng thương mại điện tử đang được phát triển. Liên hệ Cano để biết thêm về beta
+              dành cho Shop và Buyer.
+            </p>
+            <div class="cta-box__actions">
+              <a href="mailto:hello@cano.vn?subject=Canox%20-%20Shop" class="btn-white">Liên hệ — Shop</a>
+              <a href="mailto:hello@cano.vn?subject=Canox%20-%20Buyer" class="btn-outline-light">Liên hệ — Buyer</a>
+            </div>
+            <p class="cta-box__email">
+              <a href="mailto:hello@cano.vn">hello@cano.vn</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <div class="logo">
+              <span class="logo__icon">C</span>
+              <span class="logo__name">Canox</span>
+            </div>
+            <p style="margin-top: 0.5rem; max-width: 16rem; font-size: 0.875rem; color: rgba(209, 250, 240, 0.5)">
+              Sản phẩm thương mại điện tử của <strong style="color: rgba(167, 243, 224, 0.8)">Công ty Cano</strong>.
+              Kết nối Shop &amp; Buyer.
+            </p>
+          </div>
+          <div class="footer__links">
+            <div>
+              <h4>Sản phẩm</h4>
+              <ul>
+                <li><a href="#doi-tuong">Shop</a></li>
+                <li><a href="#doi-tuong">Buyer</a></li>
+                <li><a href="#tinh-nang">Tính năng</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Công ty</h4>
+              <ul>
+                <li><a href="#">Về Cano</a></li>
+                <li><a href="#lien-he">Liên hệ</a></li>
+                <li><a href="#">Điều khoản</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="footer__copy">© <span id="year"></span> Công ty Cano. Canox — All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear()
+    </script>
   </body>
 </html>

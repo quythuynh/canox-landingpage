@@ -1,27 +1,27 @@
 # Canox Landing Page
 
-Landing page tĩnh cho **Canox** — sản phẩm thương mại điện tử của **Công ty Cano** (Shop & Buyer).
+Landing page tĩnh HTML / CSS / JS cho **Canox** (Công ty Cano) — Shop & Buyer. Không backend, không database.
+
+## Cấu trúc
+
+```
+index.html
+css/style.css
+js/main.js      ← menu mobile
+favicon.svg
+```
 
 ## Chạy local
 
-```bash
-npm install
-npm run dev
-```
-
-Mở http://localhost:5173
-
-## Build
+Mở trực tiếp `index.html` trong trình duyệt, hoặc:
 
 ```bash
-npm run build
-npm run preview
+npx serve .
+# hoặc: python3 -m http.server 8080
 ```
 
-## Deploy Vercel
+## Deploy Vercel / GitHub Pages
 
-Import repo trên [vercel.com](https://vercel.com) — framework **Vite**, không cần database hay biến môi trường.
+Push lên GitHub → import project trên [vercel.com](https://vercel.com) (framework: **Other**, không cần build).
 
-```bash
-npx vercel --prod
-```
+Hoặc kéo thả thư mục lên Vercel.
