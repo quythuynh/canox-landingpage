@@ -17,6 +17,10 @@ npx serve .
 # mở http://localhost:3000
 ```
 
-## Deploy
+## Deploy Vercel
 
-Push lên GitHub → Vercel (framework **Other**, không build).
+1. [vercel.com](https://vercel.com) → **Add New Project** → import `quythuynh/canox-landingpage`
+2. Giữ mặc định: **không** Build Command, **không** Install (site HTML tĩnh)
+3. **Deploy** — mỗi lần `git push` lên `main` sẽ tự deploy lại
+
+`vercel.json` đã cấu hình sẵn (`outputDirectory: "."`).
