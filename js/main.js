@@ -27,13 +27,38 @@
     window.addEventListener('scroll', onScroll, { passive: true })
   }
 
-  // Scroll Reveal Animation using Intersection Observer
+  // Scroll Reveal & Stagger Animation using Intersection Observer
   var reveals = document.querySelectorAll('.reveal')
-  if ('IntersectionObserver' in window && reveals.length > 0) {
+  
+  if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('active')
+          
+          // Trigger count up if this section contains count-up elements
+          var counters = entry.target.querySelectorAll('.count-up')
+          if (counters.length > 0) {
+            counters.forEach(function (counter) {
+              if (!counter.classList.contains('counted')) {
+                counter.classList.add('counted')
+                var target = parseInt(counter.getAttribute('data-target'), 10)
+                var count = 0
+                var speed = 2000 / target // 2 seconds total duration
+                var updateCount = function () {
+                  var increment = target / 50
+                  if (count < target) {
+                    count += increment
+                    counter.innerText = Math.ceil(count)
+                    setTimeout(updateCount, 30)
+                  } else {
+                    counter.innerText = target
+                  }
+                }
+                updateCount()
+              }
+            })
+          }
         }
       })
     }, {
@@ -45,9 +70,55 @@
       observer.observe(el)
     })
   } else {
-    // Fallback if IntersectionObserver is not supported
+    // Fallback
     reveals.forEach(function (el) {
       el.classList.add('active')
+      el.querySelectorAll('.count-up').forEach(function (counter) {
+        counter.innerText = counter.getAttribute('data-target')
+      })
+    })
+  }
+
+  // Back to Top Button Behavior & Scrollspy
+  var backToTopBtn = document.getElementById('back-to-top')
+  var navLinks = document.querySelectorAll('.nav-desktop a')
+  var sections = document.querySelectorAll('section[id]')
+
+  window.addEventListener('scroll', function () {
+    var scrollPos = window.scrollY
+    
+    // Back to top show/hide
+    if (backToTopBtn) {
+      if (scrollPos > 300) {
+        backToTopBtn.classList.add('show')
+      } else {
+        backToTopBtn.classList.remove('show')
+      }
+    }
+
+    // Scrollspy: active nav links
+    sections.forEach(function (sec) {
+      var top = sec.offsetTop - 120
+      var height = sec.offsetHeight
+      var id = sec.getAttribute('id')
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(function (link) {
+          link.classList.remove('active')
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active')
+          }
+        })
+      }
+    })
+  }, { passive: true })
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     })
   }
 
