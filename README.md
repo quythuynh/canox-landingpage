@@ -37,4 +37,19 @@ npm run build
 npm run preview
 ```
 
-Production: deploy `dist/` (static) và chạy `npm run dev:server` (hoặc `tsx server/index.ts`) trên host riêng; cấu hình reverse proxy `/api` → API.
+## Deploy lên Vercel
+
+1. Vào [vercel.com](https://vercel.com) → **Add New Project** → import repo `quythuynh/canox-landingpage`
+2. Framework: **Vite** (tự nhận từ `vercel.json`)
+3. **Storage** → **Neon** → Create & Connect (tự gán `DATABASE_URL`)
+4. **Deploy**
+
+API production: `/api/waitlist` (serverless + Neon Postgres).  
+Local vẫn dùng SQLite qua `npm run dev` (Express port 3001).
+
+```bash
+# Deploy bằng CLI (đã login vercel)
+npx vercel --prod
+```
+
+Sau deploy, kiểm tra: `https://<project>.vercel.app/api/health`
