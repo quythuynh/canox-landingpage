@@ -50,4 +50,29 @@
       el.classList.add('active')
     })
   }
+
+  // FAQ Accordion Toggle
+  var faqTriggers = document.querySelectorAll('.faq-trigger')
+  faqTriggers.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true'
+      var item = btn.closest('.faq-item')
+      var content = item.querySelector('.faq-content')
+      
+      // Close all other items for premium experience
+      faqTriggers.forEach(function (otherBtn) {
+        if (otherBtn !== btn && otherBtn.getAttribute('aria-expanded') === 'true') {
+          otherBtn.setAttribute('aria-expanded', 'false')
+          otherBtn.closest('.faq-item').querySelector('.faq-content').style.maxHeight = '0px'
+        }
+      })
+
+      btn.setAttribute('aria-expanded', !expanded ? 'true' : 'false')
+      if (!expanded) {
+        content.style.maxHeight = content.scrollHeight + 'px'
+      } else {
+        content.style.maxHeight = '0px'
+      }
+    })
+  })
 })()
