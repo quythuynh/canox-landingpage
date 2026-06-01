@@ -9,8 +9,6 @@ lerna-debug.log*
 
 node_modules
 dist
-data/*.db
-data/*.db-*
 dist-ssr
 *.local
 
@@ -25,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
-.env
-.env.*
-!.env.example
