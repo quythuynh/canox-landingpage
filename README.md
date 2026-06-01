@@ -1,27 +1,22 @@
-# Canox Landing Page
+# CanoX Landing Page
 
-Landing page tĩnh HTML / CSS / JS cho **Canox** (Công ty Cano) — Shop & Buyer. Không backend, không database.
+Landing page tĩnh HTML/CSS/JS giới thiệu **CanoX** — nội dung lấy từ [calatha.com](https://calatha.com/) (Công ty TNHH Cano).
 
-## Cấu trúc
+## Nội dung chính
 
-```
-index.html
-css/style.css
-js/main.js      ← menu mobile
-favicon.svg
-```
+- Tagline: **Mua sắm thông minh**
+- Freeship đơn từ **199k**
+- Kênh người bán → `calatha.com/shop/check`
+- Hotline **0932 070 787** · **support@canox.com**
+- Địa chỉ: 300 Độc Lập, Tân Phú, TP.HCM
 
 ## Chạy local
 
-Mở trực tiếp `index.html` trong trình duyệt, hoặc:
-
 ```bash
 npx serve .
-# hoặc: python3 -m http.server 8080
+# mở http://localhost:3000
 ```
 
-## Deploy Vercel / GitHub Pages
+## Deploy
 
-Push lên GitHub → import project trên [vercel.com](https://vercel.com) (framework: **Other**, không cần build).
-
-Hoặc kéo thả thư mục lên Vercel.
+Push lên GitHub → Vercel (framework **Other**, không build).
