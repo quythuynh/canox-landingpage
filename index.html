@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CanoX — Mua sắm thông minh. Nền tảng thương mại điện tử của Công ty TNHH Cano." />
+    <meta name="description" content="Hệ sinh thái mua sắm thông minh — CanoX kết nối người bán và người mua trên một nền tảng thương mại điện tử." />
+    <meta name="theme-color" content="#ff7f00" />
+    <meta property="og:title" content="CanoX - Mua sắm thông minh" />
+    <meta property="og:description" content="Hệ sinh thái mua sắm thông minh của Công ty TNHH Cano." />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,61 +17,80 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>CanoX — Mua sắm thông minh</title>
+    <title>CanoX - Mua sắm thông minh</title>
   </head>
   <body>
-    <div class="promo-bar">
-      <div class="promo-bar__inner">
-        <span>Freeship cho đơn hàng từ 199.000₫</span>
-        <a class="promo-bar__seller" href="https://calatha.com/shop/check" target="_blank" rel="noopener">
-          Dành cho người bán →
-        </a>
+    <div class="site-head" id="site-head">
+      <div class="promo-bar">
+        <div class="promo-bar__inner">
+          <div class="promo-bar__left">
+            <span class="promo-bar__dot" aria-hidden="true"></span>
+            <span class="promo-bar__text">Freeship cho đơn hàng từ 199k</span>
+            <span class="promo-bar__sep" aria-hidden="true">|</span>
+            <a class="promo-bar__seller" href="https://calatha.com/shop/check" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>
+              Kênh người bán
+            </a>
+          </div>
+          <div class="promo-bar__locale">
+            <img src="https://flagcdn.com/w40/vn.png" width="20" height="14" alt="VN" class="promo-bar__flag" />
+            <span>VN · ₫</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <header class="header">
-      <div class="container header__inner">
-        <a href="#" class="logo" aria-label="CanoX trang chủ">
-          <img src="assets/logo.png" alt="CanoX" width="140" height="44" />
-        </a>
+      <header class="site-header" id="site-header">
+        <div class="container site-header__main">
+          <a href="#" class="logo logo--header" aria-label="CanoX trang chủ">
+            <img src="assets/logo.png" alt="CanoX" width="148" height="46" />
+          </a>
 
-        <nav class="nav-desktop" aria-label="Chính">
-          <a href="#tinh-nang">Tính năng</a>
-          <a href="#mua-ban">Mua &amp; bán</a>
-          <a href="#ve-canox">Về chúng tôi</a>
-          <a href="#lien-he">Liên hệ</a>
-        </nav>
+          <a href="https://calatha.com/" class="header-search" target="_blank" rel="noopener">
+            <svg class="header-search__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <span>Tìm kiếm sản phẩm, thương hiệu và shop...</span>
+          </a>
 
-        <div class="header__actions">
-          <a href="https://calatha.com/" class="btn btn--ghost" target="_blank" rel="noopener">Đăng nhập</a>
-          <a href="https://calatha.com/" class="btn btn--primary" target="_blank" rel="noopener">Mua sắm</a>
+          <div class="site-header__actions">
+            <a href="https://calatha.com/shop/check" class="btn btn--soft" target="_blank" rel="noopener">Bán hàng</a>
+            <a href="https://calatha.com/" class="btn btn--ghost-dark" target="_blank" rel="noopener">Đăng nhập</a>
+            <a href="https://calatha.com/" class="btn btn--primary" target="_blank" rel="noopener">Mua sắm ngay</a>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Mở menu">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Mở menu">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
+        <div class="container site-header__sub">
+          <nav class="nav-desktop" aria-label="Điều hướng trang">
+            <a href="#tinh-nang">Tính năng</a>
+            <a href="#mua-ban">Mua &amp; bán</a>
+            <a href="#ve-canox">Giới thiệu</a>
+            <a href="#lien-he">Liên hệ</a>
+          </nav>
+        </div>
 
-      <nav class="nav-mobile container" aria-label="Menu di động">
-        <a href="#tinh-nang">Tính năng</a>
-        <a href="#mua-ban">Mua &amp; bán</a>
-        <a href="#ve-canox">Về chúng tôi</a>
-        <a href="#lien-he">Liên hệ</a>
-        <a href="https://calatha.com/" class="btn btn--primary" target="_blank" rel="noopener">Mua sắm</a>
-      </nav>
-    </header>
+        <nav class="nav-mobile" aria-label="Menu di động">
+          <a href="#tinh-nang">Tính năng</a>
+          <a href="#mua-ban">Mua &amp; bán</a>
+          <a href="#ve-canox">Giới thiệu</a>
+          <a href="#lien-he">Liên hệ</a>
+          <a href="https://calatha.com/shop/check" target="_blank" rel="noopener">Kênh người bán</a>
+          <a href="https://calatha.com/" class="btn btn--primary btn--block" target="_blank" rel="noopener">Mua sắm ngay</a>
+        </nav>
+      </header>
+    </div>
 
     <main>
       <section class="hero">
         <div class="container hero__content">
           <div>
-            <div class="hero__logo-wrap logo logo--lg">
-              <img src="assets/logo.png" alt="CanoX" width="280" height="88" />
-            </div>
-            <span class="hero__tag">Công ty TNHH Cano</span>
-            <h1><span>Mua sắm thông minh</span> — kết nối người bán &amp; người mua</h1>
+            <span class="hero__tag">Công ty TNHH Cano · Nền tảng TMĐT</span>
+            <h1>Mua sắm <span>thông minh</span></h1>
+            <p class="hero__subtitle">Kết nối Shop &amp; Buyer trên một hệ sinh thái</p>
             <p class="hero__lead">
               Kiến tạo hệ sinh thái mua sắm thông minh, nơi niềm tin và chất lượng dịch vụ luôn là ưu
               tiên hàng đầu cho mọi gia đình Việt.
