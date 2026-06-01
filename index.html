@@ -25,16 +25,12 @@
         <div class="promo-bar__inner">
           <div class="promo-bar__left">
             <span class="promo-bar__dot" aria-hidden="true"></span>
-            <span class="promo-bar__text">Freeship cho đơn hàng từ 199k</span>
+            <span class="promo-bar__text">Đăng ký mở shop ngay hôm nay để nhận ưu đãi miễn phí vận chuyển toàn quốc!</span>
             <span class="promo-bar__sep" aria-hidden="true">|</span>
             <a class="promo-bar__seller" href="https://calatha.com/shop/check" target="_blank" rel="noopener">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>
-              Kênh người bán
+              Đăng ký bán hàng
             </a>
-          </div>
-          <div class="promo-bar__locale">
-            <img src="https://flagcdn.com/w40/vn.png" width="20" height="14" alt="VN" class="promo-bar__flag" />
-            <span>VN · ₫</span>
           </div>
         </div>
       </div>
@@ -43,13 +39,6 @@
         <div class="container site-header__main">
           <a href="#" class="logo logo--header" aria-label="CanoX trang chủ">
             <img src="assets/logo.png" alt="CanoX" width="148" height="46" />
-          </a>
-
-          <a href="https://calatha.com/" class="header-search" target="_blank" rel="noopener">
-            <svg class="header-search__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <span>Tìm kiếm sản phẩm, thương hiệu và shop...</span>
           </a>
 
           <div class="site-header__actions">
@@ -119,35 +108,68 @@
             </ul>
           </div>
 
-          <aside class="hero__panel" aria-label="Điểm nổi bật">
-            <h2>Tại sao chọn CanoX?</h2>
-            <p>
-              Sàn thương mại điện tử tập trung trải nghiệm mua — bán: tìm hàng nhanh, thanh toán an
-              toàn, giao hàng rõ ràng và chăm sóc khách hàng tận tâm.
-            </p>
-            <div class="hero__grid">
-              <div>
-                <strong>Buyer</strong>
-                <span>Người mua</span>
+          <div class="hero__dashboard">
+            <div class="dash-header">
+              <div class="dash-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+                CanoX Portal
               </div>
-              <div>
-                <strong>Shop</strong>
-                <span>Người bán</span>
-              </div>
-              <div>
-                <strong>VNPay</strong>
-                <span>Thanh toán</span>
-              </div>
-              <div>
-                <strong>COD</strong>
-                <span>Giao hàng</span>
+              <div class="dash-status">
+                <span class="dash-status-dot"></span>
+                Realtime
               </div>
             </div>
-          </aside>
+            
+            <div class="dash-stats-grid">
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Tổng doanh thu</div>
+                <div class="dash-stat-val orange">₫84.2M</div>
+                <div class="dash-stat-trend">▲ +12.4%</div>
+              </div>
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Đơn hàng mới</div>
+                <div class="dash-stat-val">+1,420</div>
+                <div class="dash-stat-trend">▲ +8.2%</div>
+              </div>
+            </div>
+
+            <div class="dash-chart">
+              <svg class="dash-chart-svg" viewBox="0 0 100 30" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.3"></stop>
+                    <stop offset="100%" stop-color="var(--brand)" stop-opacity="0.0"></stop>
+                  </linearGradient>
+                </defs>
+                <path d="M0,25 Q15,10 30,18 T60,8 T90,12 T100,5 L100,30 L0,30 Z" fill="url(#chart-grad)"></path>
+                <path d="M0,25 Q15,10 30,18 T60,8 T90,12 T100,5" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round"></path>
+                <circle cx="30" cy="18" r="2" fill="#fff" stroke="var(--brand)" stroke-width="1.5"></circle>
+                <circle cx="60" cy="8" r="2" fill="#fff" stroke="var(--brand)" stroke-width="1.5"></circle>
+                <circle cx="100" cy="5" r="2.5" fill="#fff" stroke="var(--brand)" stroke-width="2"></circle>
+              </svg>
+            </div>
+
+            <div class="dash-list">
+              <div class="dash-item">
+                <div class="dash-item-info">
+                  <span class="dash-item-title">Shop A4-Style</span>
+                  <span class="dash-item-sub">Vừa nhận đơn hàng #8402</span>
+                </div>
+                <span class="dash-item-price">+ ₫350,000</span>
+              </div>
+              <div class="dash-item">
+                <div class="dash-item-info">
+                  <span class="dash-item-title">Minh Khang Tech</span>
+                  <span class="dash-item-sub">Đăng ký bán hàng thành công</span>
+                </div>
+                <span class="dash-item-price">Shop Active</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="trust" aria-label="Cam kết">
+      <section class="trust reveal" aria-label="Cam kết">
         <div class="container trust__inner">
           <div class="trust__item">
             <strong>199k</strong>
@@ -168,7 +190,7 @@
         </div>
       </section>
 
-      <section id="tinh-nang" class="section section--gray">
+      <section id="tinh-nang" class="section section--gray reveal">
         <div class="container">
           <div class="section__header">
             <h2>Tính năng nổi bật</h2>
@@ -207,7 +229,7 @@
         </div>
       </section>
 
-      <section id="mua-ban" class="section">
+      <section id="mua-ban" class="section reveal">
         <div class="container">
           <div class="section__header">
             <h2>Dành cho ai?</h2>
@@ -241,26 +263,90 @@
         </div>
       </section>
 
-      <section id="ve-canox" class="section section--gray">
+      <section id="ve-canox" class="section section--gray reveal">
         <div class="container">
           <div class="section__header">
             <h2>Về CanoX</h2>
-            <p>Sản phẩm thương mại điện tử do Công ty TNHH Cano phát triển.</p>
+            <p>Giải pháp thương mại điện tử đột phá do Công ty TNHH Cano nghiên cứu và phát triển.</p>
           </div>
-          <div class="about-box">
-            <a href="#" class="logo logo--lg" aria-hidden="true">
-              <img src="assets/logo.png" alt="" width="200" height="63" />
-            </a>
-            <p>
-              CanoX là nền tảng <strong>mua sắm thông minh</strong>, kết nối shop và người mua trên
-              cùng một sàn giao dịch. Chúng tôi ưu tiên dịch vụ chăm sóc khách hàng, chính sách rõ
-              ràng và công nghệ hỗ trợ trải nghiệm mua — bán hiệu quả.
-            </p>
+          
+          <div class="about-grid">
+            <div class="about-visual">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="phone-header">
+                    <img class="phone-logo" src="assets/logo.png" alt="CanoX" />
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                  </div>
+                  <div class="phone-search-bar">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <span>Tìm sản phẩm, shop...</span>
+                  </div>
+                  <div class="phone-body">
+                    <div class="phone-banner">
+                      <span class="phone-banner-title">Smart Buying</span>
+                      <span class="phone-banner-sub">Hệ sinh thái mua sắm thông minh thế hệ mới</span>
+                    </div>
+                    <div class="phone-products-grid">
+                      <div class="phone-product-card">
+                        <div class="phone-product-img">Fashion</div>
+                        <span class="phone-product-name">Áo Polo Nam</span>
+                        <span class="phone-product-price">₫180,000</span>
+                      </div>
+                      <div class="phone-product-card">
+                        <div class="phone-product-img">Gadgets</div>
+                        <span class="phone-product-name">Tai Nghe Không Dây</span>
+                        <span class="phone-product-price">₫350,000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-badge-float phone-badge-float--1">
+                <span class="phone-badge-icon">🛍️</span>
+                <div class="phone-badge-text">
+                  <span class="phone-badge-title">Mua sắm tiện lợi</span>
+                  <span class="phone-badge-sub">VNPay & Freeship</span>
+                </div>
+              </div>
+              <div class="phone-badge-float phone-badge-float--2">
+                <span class="phone-badge-icon">💼</span>
+                <div class="phone-badge-text">
+                  <span class="phone-badge-title">Kênh Người Bán</span>
+                  <span class="phone-badge-sub">Quản lý chuyên nghiệp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-info">
+              <h3>Kiến tạo tương lai thương mại điện tử Việt</h3>
+              <p>
+                CanoX là nền tảng <strong>mua sắm thông minh</strong> đột phá, được thiết kế để xóa nhòa khoảng cách giữa Shop và Buyer. Chúng tôi không chỉ cung cấp một công cụ giao dịch, mà còn xây dựng một hệ sinh thái an toàn, nơi niềm tin và chất lượng được đặt lên hàng đầu.
+              </p>
+              <p>
+                Với công nghệ hỗ trợ trải nghiệm hiện đại, tối ưu hóa quy trình thanh toán cùng hệ thống giao vận thông minh, CanoX tự tin mang đến giải pháp tối ưu cho cả người bán và người mua.
+              </p>
+              <div class="about-features">
+                <div class="about-feat-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Giao dịch an toàn bảo mật tuyệt đối
+                </div>
+                <div class="about-feat-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Tối ưu hóa doanh thu cho nhà bán hàng
+                </div>
+                <div class="about-feat-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="lien-he" class="cta">
+      <section id="lien-he" class="cta reveal">
         <div class="container">
           <div class="cta__box">
             <a href="#" class="logo" aria-hidden="true">

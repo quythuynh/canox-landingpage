@@ -26,4 +26,28 @@
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
   }
+
+  // Scroll Reveal Animation using Intersection Observer
+  var reveals = document.querySelectorAll('.reveal')
+  if ('IntersectionObserver' in window && reveals.length > 0) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active')
+        }
+      })
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    })
+
+    reveals.forEach(function (el) {
+      observer.observe(el)
+    })
+  } else {
+    // Fallback if IntersectionObserver is not supported
+    reveals.forEach(function (el) {
+      el.classList.add('active')
+    })
+  }
 })()
