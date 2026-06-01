@@ -215,15 +215,19 @@ ul {
   }
 }
 
-/* Header chính — nền sáng như sàn TMĐT */
+/* Header chính — Nền tối để logo nền đen tệp PNG chìm hoàn hảo */
 .site-header {
-  background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
-  border-bottom: 1px solid var(--gray-100);
-  transition: box-shadow 0.25s;
+  background: var(--obsidian);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.25s ease;
 }
 
 .site-header.is-scrolled {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  background: rgba(8, 7, 13, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-header__main {
@@ -236,7 +240,7 @@ ul {
 .logo--header {
   flex-shrink: 0;
   padding: 0.25rem 0.5rem;
-  background: var(--black);
+  background: transparent; /* Loại bỏ hộp nền đen xấu xí, hòa lẫn mượt mà vào header */
   border-radius: 0.5rem;
 }
 
@@ -261,16 +265,16 @@ ul {
   padding: 0 1.125rem;
   font-size: 0.875rem;
   color: var(--gray-500);
-  background: var(--gray-100);
-  border: 1px solid #e4e4e7;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 9999px;
   transition: border-color 0.2s, background 0.2s;
 }
 
 .header-search:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 127, 0, 0.45);
-  color: var(--gray-700);
+  color: #fff;
 }
 
 .header-search__icon {
@@ -290,7 +294,7 @@ ul {
 .site-header__sub {
   display: none;
   padding-bottom: 0.625rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-desktop {
@@ -301,12 +305,12 @@ ul {
 .nav-desktop a {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--gray-500);
+  color: rgba(255, 255, 255, 0.75);
   transition: color 0.2s;
 }
 
 .nav-desktop a:hover {
-  color: var(--brand-dark);
+  color: var(--brand);
 }
 
 @media (min-width: 900px) {
@@ -351,23 +355,24 @@ ul {
 
 .btn--ghost-dark {
   display: none;
-  color: var(--gray-700);
+  color: rgba(255, 255, 255, 0.85);
   background: transparent;
 }
 
 .btn--ghost-dark:hover {
-  color: var(--brand-dark);
+  color: var(--brand);
 }
 
 .btn--soft {
   display: none;
-  color: var(--brand-dark);
-  background: var(--brand-light);
-  border: 1px solid rgba(255, 127, 0, 0.25);
+  color: var(--brand);
+  background: rgba(255, 127, 0, 0.1);
+  border: 1px solid rgba(255, 127, 0, 0.2);
 }
 
 .btn--soft:hover {
-  background: #ffe8cc;
+  background: rgba(255, 127, 0, 0.2);
+  color: #fff;
 }
 
 .btn--primary {
@@ -429,10 +434,10 @@ ul {
 .menu-toggle {
   display: flex;
   padding: 0.5rem;
-  background: var(--gray-100);
-  border: 1px solid var(--gray-100);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.5rem;
-  color: var(--gray-800);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -446,8 +451,8 @@ ul {
   flex-direction: column;
   gap: 0.125rem;
   padding: 0.5rem 1rem 1rem;
-  background: #fff;
-  border-top: 1px solid var(--gray-100);
+  background: var(--obsidian);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-mobile.is-open {
@@ -458,11 +463,11 @@ ul {
   padding: 0.625rem 0;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--gray-700);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .nav-mobile a:hover {
-  color: var(--brand-dark);
+  color: var(--brand);
 }
 
 .nav-mobile .btn--primary {
