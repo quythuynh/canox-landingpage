@@ -120,6 +120,12 @@ ul {
   }
 }
 
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
 .promo-bar__inner {
   display: flex;
   align-items: center;
